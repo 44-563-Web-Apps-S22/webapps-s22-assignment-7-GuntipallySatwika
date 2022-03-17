@@ -38,7 +38,7 @@
 		<button onclick="makeNewDiv()">Add value</button>
         <button onclick="fetchItem()">Fetch</button>
         <button onclick="zap()">Zap values</button>
-	
+        <button type="button" class="btn btn-primary" onclick="removeDup()">Unique</button>
 	
 </body>
 <script>
@@ -85,6 +85,23 @@
              }
         }
     }
+    function queue() {
 
+queueItems = document.getElementsByClassName('queue');
+ var length = queueItems.length
+
+for (let i = 0; i < length; i++) {
+
+for (let j =i+1; j < length - 1; j++) {
+
+if (queueItems[i].innerHTML == queueItems [j].innerHTML)
+ { queueItems [j].remove();
+
+}
+}
+}
+
+
+}
 </script>
 </html>
